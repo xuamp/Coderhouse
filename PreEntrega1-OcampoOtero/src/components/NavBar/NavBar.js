@@ -23,7 +23,7 @@ function NavBar( props ) {
                     <span>Productos</span>
                 </div>
                 <div className='item-carrito'>
-                    <li><CartWidget /></li>
+                    <li><CartWidget numero='30' /></li>
                 </div>
             </ul>
         </div>

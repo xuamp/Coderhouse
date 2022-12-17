@@ -1,11 +1,13 @@
 
 import './CartWidget.css';
 
-function CartWidget() {
+function CartWidget(props) {
+const {numero} = props
+
   return (
     <div className="Carrito">
         <i class="fa-solid fa-cart-shopping"></i>
-        <p>25</p>
+        <p>{numero}</p>
     </div>
   );
 }

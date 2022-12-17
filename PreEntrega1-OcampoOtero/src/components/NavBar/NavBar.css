@@ -9,6 +9,7 @@
 .imagen {
     height: 20vh;
     width: 20%;
+    border-bottom: 3px solid #3ABFBC;
 }
 
 .imagen img{
