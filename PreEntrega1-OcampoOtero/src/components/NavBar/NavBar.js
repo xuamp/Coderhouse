@@ -22,7 +22,7 @@ function NavBar( props ) {
                     <li><i class="fa-regular fa-lightbulb"></i></li><br />
                     <span>Productos</span>
                 </div>
-                <div className='item-nav'>
+                <div className='item-carrito'>
                     <li><CartWidget /></li>
                 </div>
             </ul>

@@ -45,14 +45,25 @@
     text-shadow: 0 0 4px grey;
     transition: all 1s ease;
     opacity: 1;
+    flex-basis: 25%;
 }
 
 .item-nav span {
     font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
-    transition: transform 2s ease, opacity 3s ease-out;
+    transition: transform 2s ease, opacity 1s ease-out;
     opacity: 0;
+    display: block;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3ABFBC;
+    text-shadow: 0 0 4px grey;
+    flex-basis: 25%;
 }
 
 .item-nav:hover {

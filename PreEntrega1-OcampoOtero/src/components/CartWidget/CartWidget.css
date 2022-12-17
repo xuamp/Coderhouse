@@ -1,10 +1,10 @@
 .Carrito {
-    border: 1px solid #3ABFBC;
     border-radius: 1em;
     display: flex;
-    width: 100%;
+    width: 130%;
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    color: #3ABFBC;
+    color: white;
+    background-color: #3ABFBC;
 }

@@ -1,7 +1,7 @@
-import { Button } from 'react-bootstrap';
+
 import './CartWidget.css';
 
-function CartWidget( props ) {
+function CartWidget() {
   return (
     <div className="Carrito">
         <i class="fa-solid fa-cart-shopping"></i>
