@@ -11,15 +11,15 @@ function NavBar( props ) {
         <div className='Nav'>
             <ul>
                 <div className='item-nav'>
-                    <li><i class="fa-sharp fa-solid fa-house"></i></li><br />
+                    <li><i className="fa-sharp fa-solid fa-house"></i></li><br />
                     <span>Inicio</span>
                 </div>
                 <div className='item-nav'>
-                    <li><i class="fa-regular fa-envelope"></i></li><br />
+                    <li><i className="fa-regular fa-envelope"></i></li><br />
                     <span>Contacto</span>
                 </div>
                 <div className='item-nav'>
-                    <li><i class="fa-regular fa-lightbulb"></i></li><br />
+                    <li><i className="fa-regular fa-lightbulb"></i></li><br />
                     <span>Productos</span>
                 </div>
                 <div className='item-carrito'>

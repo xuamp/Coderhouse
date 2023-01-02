@@ -6,7 +6,7 @@ const {numero} = props
 
   return (
     <div className="Carrito">
-        <i class="fa-solid fa-cart-shopping"></i>
+        <i className="fa-solid fa-cart-shopping"></i>
         <p>{numero}</p>
     </div>
   );

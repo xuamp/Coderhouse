@@ -1,14 +1,17 @@
 
-import Alerta from '../Alerta/Alerta';
+import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
 
 function ItemListContainer (props) {
 
+  const { aumento, contador, disminucion, anexion } = props
+
   return (
     <div className="landing">
-      <p> {props.greeting} </p>
-      <Alerta />
+      <ItemCount numero={aumento} contador={contador} menos={disminucion} agregar={anexion} prueba={props.prueba}/>
+      <ItemList />
     </div>
   );
 }
