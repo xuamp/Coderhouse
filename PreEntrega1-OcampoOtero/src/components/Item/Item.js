@@ -10,6 +10,7 @@ function Item (props) {
         <img className='imagenes' src={`imagenes/${props.pictureUrl}`} alt='sisi' />
         <p className='precio'>$ {props.price}</p>
         <p className='descripcion'>{props.descripcion}</p>
+        <a href='#'><button className='boton-detalle'>Ver detalle</button></a>
     </div>
   );
 }
