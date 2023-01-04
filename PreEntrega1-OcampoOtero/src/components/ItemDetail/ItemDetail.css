@@ -1,6 +1,18 @@
 .ItemDetail{
-    height: 60%;
+    width: 60%;
     margin-right: auto;
     margin-left: auto;
-    background-color: beige;
+    background-color: rgb(116, 116, 113);
+    border: 2px solid black;
+    display: flex;
+    margin-top: 30px;
+    height: auto;
+    border-radius: 2em;
+}
+
+.ImagenDetail{
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 2em;
 }

@@ -4,6 +4,8 @@ import './ItemDetail.css';
 
 function ItemDetail (props) {
 
+  const { aumento, contador, disminucion, anexion } = props
+
   return (
     <div className="ItemDetail">
         <div>
@@ -13,7 +15,7 @@ function ItemDetail (props) {
             <p>Titulo</p>
             <p>Descripcion</p>
             <p>Precio</p>
-            <ItemCount />
+            <ItemCount numero={aumento} contador={contador} menos={disminucion} agregar={anexion} prueba={props.prueba}/>
         </div>
     </div>
   );

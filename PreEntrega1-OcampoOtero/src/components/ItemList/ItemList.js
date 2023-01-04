@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import Item from '../Item/Item';
 import './ItemList.css';
+import Item from '../Item/Item';
 
 
 function ItemList (props) {
 
     const [ lista, setLista ] = useState([])
-    const [ impre, setImpre ]= useState ()
+    const [ impre, setImpre ]= useState ([])
     const [ loading, setLoading ] = useState(true)
 
     const productos = [{id: 1, title: "Rollo de cocina", descripcion: 'el mejor rollo de cocina', price: 15, pictureUrl: 'cocina.jpg'},
@@ -16,18 +16,18 @@ function ItemList (props) {
     useEffect(() => {
         setTimeout(() => {
             llamado();
-        }, 2000) 
-           setImpre( lista.map((item) => 
+            setImpre( lista.map((item) => 
             <Item id={item.id} 
             price={item.price}
             descripcion={item.descripcion}
             pictureUrl={item.pictureUrl}
             title={item.title}/>))
-        }
-    )
+            setLoading(false)
+        }, 2000) 
+        }, )
 
     function promesa () {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             resolve(productos)
         })
     }
@@ -35,7 +35,6 @@ function ItemList (props) {
     async function llamado () {
         const dato = await promesa();
         setLista(dato);
-        setLoading(false)
     }
 
   return (
