@@ -27,7 +27,7 @@ function ItemList (props) {
     )
 
     function promesa () {
-        return new Promise((resolve) => {
+        return new Promise((resolve, reject) => {
             resolve(productos)
         })
     }
