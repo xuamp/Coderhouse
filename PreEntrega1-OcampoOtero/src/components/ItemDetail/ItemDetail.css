@@ -2,7 +2,7 @@
     width: 60%;
     margin-right: auto;
     margin-left: auto;
-    background-color: rgb(116, 116, 113);
+    background-color: rgb(226, 226, 220);
     border: 2px solid black;
     display: flex;
     margin-top: 30px;
@@ -16,3 +16,4 @@
     margin: 20px;
     border-radius: 2em;
 }
+

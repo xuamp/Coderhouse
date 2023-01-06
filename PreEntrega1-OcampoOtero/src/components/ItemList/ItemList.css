@@ -1,19 +1,19 @@
-.ItemList{
-    border: 2px solid black;
-    border-radius: 2em;
-    height: auto;
-    padding: 20px;
-    width: 60%;
-    display: flex;
-    background-color: rgb(155, 162, 160);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 35px;
-    text-align: center;
-    }
+.ItemList {
+  border: 2px solid black;
+  border-radius: 2em;
+  height: auto;
+  padding: 20px;
+  width: 60%;
+  display: flex;
+  background-color: rgb(155, 162, 160);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 35px;
+  text-align: center;
+  flex-wrap: wrap;
+}
 
-.carga{
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 30px;
-
+.carga {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
 }
