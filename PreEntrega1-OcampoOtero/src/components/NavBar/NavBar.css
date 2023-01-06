@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #3ABFBC;
+    color: #0f2c2c;
     text-shadow: 0 0 4px grey;
     transition: all 1s ease;
     opacity: 1;
@@ -53,9 +53,6 @@
     font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
-    transition: transform 2s ease, opacity 1s ease-out;
-    opacity: 0;
-    display: block;
 }
 
 .item-carrito {
@@ -67,16 +64,7 @@
     flex-basis: 25%;
 }
 
-.item-nav:hover {
-    color: #065a59;
-    transform: translatex(-7px);
-}
 
-.item-nav:hover span{
-    color: #065a59;
-    transform: translatex(-5px);
-    opacity: 1;
-}
 
 
 

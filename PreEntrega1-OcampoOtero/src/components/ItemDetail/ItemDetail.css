@@ -17,3 +17,21 @@
     border-radius: 2em;
 }
 
+.tituloDetail{
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.descripcionDetail{
+    height: 100px;
+    width: 95%;;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 20px;
+}
+
+.precioDetail{
+    font-size: 20px;
+}
+
