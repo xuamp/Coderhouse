@@ -38,7 +38,7 @@ export const productos = [
   {
     id: 5,
     title: "Regio",
-    descripcion: "el mas suave de todos",
+    descripcion: "la mejor calidad",
     price: 5,
     pictureUrl:
       "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00750103662164L.jpg",
@@ -65,7 +65,7 @@ export const productos = [
   {
     id: 8,
     title: "Scott",
-    descripcion: "el mas suave de todos",
+    descripcion: "Calidad internacional",
     price: 5,
     pictureUrl:
       "https://tse1.mm.bing.net/th?id=OIP.PndTzrLo62HLfiBjc8QC2QHaHa&pid=Api&P=0",
