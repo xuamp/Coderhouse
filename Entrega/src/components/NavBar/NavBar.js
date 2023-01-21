@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
+import { contexto } from "../Context/CartContex";
+import { useContext } from "react";
 
 function NavBar(props) {
+
+const { hayItems } = useContext(contexto)
+
   return (
     <div className="NavBar">
       <div className="imagen">
@@ -38,7 +43,7 @@ function NavBar(props) {
           </div>
           <div className="item-carrito">
             <li>
-              <CartWidget numero="30" />
+              { hayItems ? <CartWidget /> : undefined}
             </li>
           </div>
         </ul>

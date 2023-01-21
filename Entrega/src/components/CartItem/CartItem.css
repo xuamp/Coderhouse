@@ -1,0 +1,10 @@
+.buttonCart{
+  background-color: rgb(187, 241, 241);
+  height: 50px;
+  width: 100px;
+  border-radius: 1em;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: 40px;
+}

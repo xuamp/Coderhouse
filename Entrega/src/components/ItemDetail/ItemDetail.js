@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import { useContext } from "react";
+import { contexto } from "../Context/CartContex";
 
 function ItemDetail(props) {
   const { detalle } = props;
@@ -9,11 +11,13 @@ function ItemDetail(props) {
   const [compro, setCompro] = useState(false);
   const [contador, setContador] = useState(0);
 
+  const { addItem } = useContext(contexto)
+
   var stock = 8;
 
   function onAdd() {
     setCompro(true);
-    console.log(`Se agregaron al carrito ${contador} productos`);
+    addItem(detalle, contador)
   }
 
   function incremento() {
@@ -41,7 +45,7 @@ function ItemDetail(props) {
         </div>
         <p className="precioDetail">$ {detalle.price}</p>
         {compro ? (
-          <Link to={"/cart"}> <button className="carrito">Carrito</button></Link>
+          <Link to={"/cart"}> <button className="carrito">Terminar mi compra</button></Link>
         ) : (
           <ItemCount
             numero={incremento}

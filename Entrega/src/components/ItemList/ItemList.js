@@ -1,5 +1,6 @@
 import "./ItemList.css";
 import Item from "../Item/Item";
+import { SyncLoader } from "react-spinners";
 
 function ItemList(props) {
   const { lista, loading } = props;
@@ -7,10 +8,11 @@ function ItemList(props) {
   return (
     <div className="ItemList">
       {loading ? (
-        <p className="carga"> Cargando ...</p>
+        <p className="carga"> <SyncLoader color="#ffffff" /></p>
       ) : (
-        lista.map((item) => (
+        lista.map((item, index) => (
           <Item
+            key={index}
             id={item.id}
             price={item.price}
             descripcion={item.descripcion}
