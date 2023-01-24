@@ -11,13 +11,13 @@ function ItemDetail(props) {
   const [compro, setCompro] = useState(false);
   const [contador, setContador] = useState(0);
 
-  const { addItem } = useContext(contexto)
+  const { addItem } = useContext(contexto);
 
   var stock = 8;
 
   function onAdd() {
     setCompro(true);
-    addItem(detalle, contador)
+    addItem(detalle, contador);
   }
 
   function incremento() {
@@ -45,7 +45,10 @@ function ItemDetail(props) {
         </div>
         <p className="precioDetail">$ {detalle.price}</p>
         {compro ? (
-          <Link to={"/cart"}> <button className="carrito">Terminar mi compra</button></Link>
+          <Link to={"/cart"}>
+            {" "}
+            <button className="carrito">Terminar mi compra</button>
+          </Link>
         ) : (
           <ItemCount
             numero={incremento}
