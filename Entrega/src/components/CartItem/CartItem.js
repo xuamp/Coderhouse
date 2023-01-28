@@ -3,15 +3,13 @@ import { contexto } from "../Context/CartContex";
 import { useContext } from "react";
 
 function CartItem(props) {
+  const { removeItem, setCant, cant, setTotal, total } = useContext(contexto);
 
-  const { removeItem, setCant, cant, setTotal, total } = useContext(contexto)
-
-  function eliminar (){
-    const id = props.id
-      removeItem(id)
-      setCant(cant - props.cantidad)
-      setTotal(total - props.total)
-
+  function eliminar() {
+    const id = props.id;
+    removeItem(id);
+    setCant(cant - props.cantidad);
+    setTotal(total - props.total);
   }
 
   return (
@@ -24,7 +22,9 @@ function CartItem(props) {
         <p className="precioDetail">Cantidad: {props.cantidad}</p>
         <p className="precioDetail">Precio Unitario: $ {props.precio}</p>
         <p className="precioDetail">Total: $ {props.total}</p>
-        <button className="buttonCart" onClick={eliminar}>Eliminar</button>
+        <button className="buttonCart" onClick={eliminar}>
+          Eliminar
+        </button>
       </div>
     </div>
   );

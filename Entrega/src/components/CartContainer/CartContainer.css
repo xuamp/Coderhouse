@@ -1,12 +1,22 @@
 .CartContainer {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 
-  .totalCompra{
-    font-size: 30px;
-    font-family: "PT Sans Narrow", sans-serif;
-  }
-  
+.totalCompra {
+  font-size: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.finalizar{
+  background-color: rgb(187, 241, 241);
+  height: auto;
+  width: 100px;
+  border-radius: 1em;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: 7px;
+}

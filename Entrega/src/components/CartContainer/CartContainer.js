@@ -25,6 +25,9 @@ function CartContainer(props) {
             Vaciar
           </button>
           <p className="totalCompra">Total de la Compra: $ {total}</p>
+          <Link to="/contacto">
+            <button className="finalizar">Finalizar Compra</button>
+          </Link>
         </div>
       ) : (
         <div>

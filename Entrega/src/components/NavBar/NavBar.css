@@ -44,8 +44,6 @@
   align-items: center;
   color: #0f2c2c;
   text-shadow: 0 0 4px grey;
-  transition: all 1s ease;
-  opacity: 1;
   flex-basis: 25%;
 }
 

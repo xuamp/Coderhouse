@@ -1,23 +1,42 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 import { useEffect, useState } from "react";
-import { productos } from "../Productos";
 import { useParams } from "react-router-dom";
+import { getDoc, doc } from "firebase/firestore";
+import { productsCollection } from "../../FiberbaseConfig";
+import { ClipLoader } from "react-spinners";
 
 function ItemDetailContainer(props) {
   const [objeto, setObjeto] = useState({});
+  const [cargando, setCargando] = useState(true);
   const valor = useParams();
 
   useEffect(() => {
-    const filtrado = productos.find(
-      (item) => item.id === parseInt(valor.numero)
-    );
-    setObjeto(filtrado);
+    function getProduct() {
+      const referenciaDoc = doc(productsCollection, valor.numero);
+      const pedido = getDoc(referenciaDoc);
+
+      pedido
+        .then((resultado) => {
+          const producto = resultado.data();
+          const detalle = { ...producto, id: resultado.id };
+          setObjeto(detalle);
+          setCargando(false);
+        })
+        .catch((error) => console.log(error));
+    }
+    getProduct();
   }, [valor.numero]);
 
   return (
     <div className="itemDetailContainer">
-      <ItemDetail detalle={objeto} />
+      {cargando ? (
+        <p>
+          <ClipLoader color="black" />
+        </p>
+      ) : (
+        <ItemDetail detalle={objeto} />
+      )}
     </div>
   );
 }

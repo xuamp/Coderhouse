@@ -53,8 +53,8 @@ a {
   color: black;
 }
 
-@media screen and (max-width: 900px ) {
-  .Item{
+@media screen and (max-width: 900px) {
+  .Item {
     width: 60%;
   }
 }

@@ -5,8 +5,7 @@ import { contexto } from "../Context/CartContex";
 import { useContext } from "react";
 
 function NavBar(props) {
-
-const { hayItems } = useContext(contexto)
+  const { hayItems } = useContext(contexto);
 
   return (
     <div className="NavBar">
@@ -42,9 +41,7 @@ const { hayItems } = useContext(contexto)
             </Link>
           </div>
           <div className="item-carrito">
-            <li>
-              { hayItems ? <CartWidget /> : undefined}
-            </li>
+            <li>{hayItems ? <CartWidget /> : undefined}</li>
           </div>
         </ul>
       </div>

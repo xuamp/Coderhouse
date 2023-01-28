@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getDocs, query, where } from "firebase/firestore";
 import { productsCollection } from "../../FiberbaseConfig";
+import { ClipLoader } from "react-spinners";
 
 function ItemListContainer(props) {
   const [lista, setLista] = useState([]);
@@ -18,31 +19,42 @@ function ItemListContainer(props) {
       );
       const pedido = getDocs(filtro);
 
-      pedido.then((resultado) => {
-        const prod = resultado.docs.map((doc) => {
-          return { id: doc.id, ...doc.data() };
-        });
-        setLista(prod);
-      });
+      pedido
+        .then((resultado) => {
+          const catalogoFiltrado = resultado.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          });
+          setLista(catalogoFiltrado);
+          setLoading(false);
+        })
+        .catch((err) => console.log(err));
     };
     const getProducts = () => {
       const pedido2 = getDocs(productsCollection);
 
-      pedido2.then((resultado) => {
-        const prod = resultado.docs.map((doc) => {
-          return { id: doc.id, ...doc.data() };
-        });
-        setLista(prod);
-      });
+      pedido2
+        .then((resultado) => {
+          const catalogo = resultado.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          });
+          setLista(catalogo);
+          setLoading(false);
+        })
+        .catch((err) => console.log(err));
     };
     categoryName ? getProductsF() : getProducts();
-    setLoading(false);
   }, [categoryName]);
 
   return (
     <div className="landing">
       <h1>Agrega lo que mas te guste al carrito!!</h1>
-      <ItemList lista={lista} loading={loading} />
+      {loading ? (
+        <p>
+          <ClipLoader color="black" />
+        </p>
+      ) : (
+        <ItemList lista={lista} loading={loading} />
+      )}
     </div>
   );
 }

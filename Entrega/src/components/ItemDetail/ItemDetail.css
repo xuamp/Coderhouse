@@ -13,26 +13,25 @@
   margin-bottom: 20px;
 }
 
-.dataDetail{
+.dataDetail {
   text-align: center;
   height: 351px;
   width: 324px;
 }
 
-.carrito{
-    width: 150px;
-    background-color: rgb(107, 107, 100);
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    border-radius: 1em;
-    padding: 10px;
-    margin-top: 20px;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-  }
-    
+.carrito {
+  width: 150px;
+  background-color: rgb(107, 107, 100);
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  border-radius: 1em;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 .ImagenDetail {
   height: 300px;
@@ -59,5 +58,3 @@
 .precioDetail {
   font-size: 20px;
 }
-
-
