@@ -1,0 +1,49 @@
+.contenedor {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 1em;
+  padding: 20px;
+  background-color: rgb(194, 194, 185);
+  box-shadow: 0px 0px 15px gray;
+}
+
+.celda {
+  width: 80%;
+  border: 1px solid rgb(42, 84, 161);
+  font-family: "PT Sans Narrow", sans-serif;
+  margin-top: 20px;
+  font-size: large;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 5px rgb(68, 67, 67);
+}
+
+.S {
+  font-size: 18px;
+  background-color: rgb(147, 192, 231);
+  font-weight: 900;
+}
+
+.encabe {
+  font-size: 1.5em;
+  font-family: "PT Sans Narrow", sans-serif;
+  text-decoration: underline;
+}
+
+.A {
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: 800;
+}

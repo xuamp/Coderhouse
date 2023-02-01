@@ -38,3 +38,8 @@
 i {
   cursor: pointer;
 }
+
+.boton-contador:hover{
+  background-color: rgb(179, 179, 179);
+  transition: 0.3s ease;
+}
